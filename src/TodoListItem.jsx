@@ -1,6 +1,6 @@
 function TodoListItem( {todo} ){
         return (
-            <li>{todo}</li>
+            <li>{todo.title}</li>
         )
 }
 
