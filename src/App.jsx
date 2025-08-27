@@ -97,7 +97,6 @@ function App() {
       if (!records[0].fields.isCompleted) {
         savedTodo.isCompleted = false;
       }
-      console.log('Saved todo object:', savedTodo);
       setTodoList([...todoList, savedTodo]);
       console.log(todoList);
     } catch (error) {
@@ -141,6 +140,7 @@ function App() {
     };
 
     try {
+      setIsSaving(true);
       const resp = await fetch(url, options);
       if (!resp.ok) {
         throw new Error(resp.statusText);
@@ -186,6 +186,7 @@ function App() {
     };
 
     try {
+      setIsSaving(true);
       const resp = await fetch(url, options);
       if (!resp.ok) {
         throw new Error(resp.statusText);
