@@ -235,7 +235,11 @@ const token = `Bearer ${import.meta.env.VITE_PAT}`;
 
   return (
     <div className={styles.container}>
-      <h1>My Todos</h1>
+      <div className={styles.heading}>
+        <img className={styles.logo} src='./checklist.png'/>
+         <h1>My Todos</h1>
+      </div>
+     
       <TodoForm onAddTodo={addTodo} isSaving={isSaving} />
       <TodoList
         todoList={todoList}
