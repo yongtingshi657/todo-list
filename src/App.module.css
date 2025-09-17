@@ -1,0 +1,32 @@
+.container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    
+}
+
+
+.errorMessage {
+    margin-top: 20px;
+    border: 2px dashed rgb(228, 123, 123);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 0.5rem 3rem;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 50px;
+}

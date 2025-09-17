@@ -1,4 +1,22 @@
 import { useEffect, useState } from 'react';
+import styled from 'styled-components';
+
+const StyledForm = styled.form`
+    display:flex;
+    gap:10px;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content:center;
+
+`
+
+const StyledDiv = styled.div`
+    display:flex;
+    gap:10px;
+    align-items: center;
+    justify-content:center;
+    flex-wrap:wrap
+`
 
 export default function TodosViewForm({
   sortDirection,
@@ -29,8 +47,8 @@ export default function TodosViewForm({
   }
 
   return (
-    <form onSubmit={preventRefresh}>
-      <div>
+    <StyledForm onSubmit={preventRefresh}>
+      <StyledDiv>
         <label>Search Todos</label>
         <input
           type="text"
@@ -42,7 +60,7 @@ export default function TodosViewForm({
         <button type="button" onClick={() => setLocalQueryString('')}>
           Clear
         </button>
-      </div>
+      </StyledDiv>
       <label>Sort By</label>
       <select
         onChange={(e) => {
@@ -64,6 +82,6 @@ export default function TodosViewForm({
         <option value="asc">Ascending</option>
         <option value="desc">Descending</option>
       </select>
-    </form>
+    </StyledForm>
   );
 }

@@ -3,6 +3,7 @@ import TodoList from './features/TodoList/TodoList';
 import TodoForm from './features/TodoForm';
 import TodosViewForm from './features/TodosViewForm';
 import { useEffect, useState, useCallback } from 'react';
+import styles from "./App.module.css"
 
 
 
@@ -233,8 +234,12 @@ const token = `Bearer ${import.meta.env.VITE_PAT}`;
   };
 
   return (
-    <div>
-      <h1>My Todos</h1>
+    <div className={styles.container}>
+      <div className={styles.heading}>
+        <img className={styles.logo} src='./checklist.png'/>
+         <h1>My Todos</h1>
+      </div>
+     
       <TodoForm onAddTodo={addTodo} isSaving={isSaving} />
       <TodoList
         todoList={todoList}
@@ -252,7 +257,7 @@ const token = `Bearer ${import.meta.env.VITE_PAT}`;
         setQueryString={setQueryString}
       />
       {errorMessage && (
-        <div>
+        <div className={styles.errorMessage}>
           <hr></hr>
           <p>{errorMessage}</p>
           <button
