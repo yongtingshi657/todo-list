@@ -32,12 +32,10 @@ export default function TodosViewForm({
   useEffect(() => {
     const debounce = setTimeout(() => {
       setQueryString(localQueryString);
-      console.log("set time out")
     }, 500);
 
     return (
      ()=> {clearTimeout(debounce)
-      console.log("cleaned")
      }
     )
   }, [localQueryString, setQueryString]);
