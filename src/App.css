@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace, sans-serif;
+  margin: 0;
+}
+
+#root {
+ background: #f6e9ca;
+  min-height: 100vh;
+}
+
+
+
+button {
+    background-color: #8aa8c1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
