@@ -15,7 +15,7 @@ const StyledForm = styled.form`
 const StyledButton = styled.button`
   &:disabled {
     font-style: italic;
-    background: #e5b924;
+    background: grey;
   }
 `;
 
