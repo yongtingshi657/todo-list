@@ -15,7 +15,8 @@ const StyledDiv = styled.div`
     gap:10px;
     align-items: center;
     justify-content:center;
-    flex-wrap:wrap
+    flex-wrap:wrap;
+    margin-top:10px;
 `
 
 export default function TodosViewForm({
